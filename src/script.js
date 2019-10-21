@@ -9,6 +9,7 @@ let firstCard,
     let randomCard = Math.floor(Math.random() * 12);
     card.style.order = randomCard;
   });
+  return true;
 })(); //executed immediately after its definition
 
 let tilesLocked = false; //locks tiles when there is two flipped cards.

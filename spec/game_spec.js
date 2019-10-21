@@ -1,13 +1,13 @@
 describe("memory game tests", () => {
-    const jsdom = require("jsdom");
-    const { JSDOM } = jsdom;
-  
-    const virtualConsole = new jsdom.VirtualConsole();
-    virtualConsole.sendTo(console);
-  
-    beforeEach(() => {
-      dom = new JSDOM(
-        `<!DOCTYPE html>
+  const jsdom = require("jsdom");
+  const { JSDOM } = jsdom;
+
+  const virtualConsole = new jsdom.VirtualConsole();
+  virtualConsole.sendTo(console);
+
+  beforeEach(() => {
+    dom = new JSDOM(
+      `<!DOCTYPE html>
   <html lang="en">
   
   <head>
@@ -94,32 +94,30 @@ describe("memory game tests", () => {
   
   </html>
   <script src="https://raw.githubusercontent.com/FaithMo/memoryGame/master/src/script.js"></script>`,
-        {
-          runScripts: "dangerously",
-          resources: "usable"
-        }
-      );
-  
-      global.view = dom.window;
-      global.window = dom.window.document;
-      game = require("../src/script")
-    });
-  
-    it("should shuffle cards after all cards have been opened", () => {
-      let shuffle = require("../src/script");
-      expect(shuffle).toBeDefined();
-    });
-  
-    it("should make cards clickable", () => {
-      let flip = require("../src/script");
-      tilesLocked = false;
-      expect(flip).toBeDefined();
-    });
-  
-    it("should test if cards match for flipping", () => {
-      let match = require("../src/script");
-      expect(match).toBeDefined();
-    });
-  
+      {
+        runScripts: "dangerously",
+        resources: "usable"
+      }
+    );
+
+    global.view = dom.window;
+    global.window = dom.window.document;
+    game = require("../src/script");
   });
-  
+
+  it("should shuffle cards after all cards have been opened", () => {
+    let shuffle = require('../src/script');
+    expect(shuffle).toBeDefined();
+  });
+
+  it("should make cards clickable", () => {
+    let flip = require("../src/script");
+    tilesLocked = false;
+    expect(flip).toBeDefined();
+  });
+
+  it("should test if cards match for flipping", () => {
+    let match = require("../src/script");
+    expect(match).toBeDefined();
+  });
+});
