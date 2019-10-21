@@ -1,8 +1,5 @@
 const cards = document.querySelectorAll(".tiles");
-let firstCard,
-  secondCard,
-  hasFlipped = false,
-
+let firstCard, secondCard, hasFlipped = false;
 
 (shuffleTiles = () => {
   cards.forEach(card => {
@@ -15,7 +12,7 @@ let tilesLocked = false; //locks tiles when there is two flipped cards.
 //master function
 function flipCard() {
   if (tilesLocked) return; //when no tiles are open
-  
+
   this.classList.toggle("flip"); //if class is available - remove it. if not add it.
   if (!hasFlipped) {
     //on the first click
