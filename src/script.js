@@ -2,7 +2,7 @@ const cards = document.querySelectorAll(".tiles");
 let firstCard,
   secondCard,
   hasFlipped = false,
-  tilesLocked = false; //locks tiles when there is two flipped cards.
+
 
 (shuffleTiles = () => {
   cards.forEach(card => {
@@ -11,6 +11,7 @@ let firstCard,
   });
 })(); //executed immediately after its definition
 
+let tilesLocked = false; //locks tiles when there is two flipped cards.
 //master function
 function flipCard() {
   if (tilesLocked) return; //when no tiles are open
