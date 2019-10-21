@@ -1,4 +1,5 @@
-const cards = document.querySelectorAll(".tiles");
+const cards = global.window.querySelectorAll(".tiles");
+//const cards = document.querySelectorAll(".tiles");
 let firstCard,
   secondCard,
   hasFlipped = false;
