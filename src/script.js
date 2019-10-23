@@ -48,3 +48,7 @@ cardsMatching = () => {
     }, 500);
   }
 };
+
+module.exports = cardsMatching;
+module.exports = turnOver;
+module.exports = shuffleTiles;

@@ -2,8 +2,8 @@ describe("memory game tests", () => {
   const jsdom = require("jsdom");
   const { JSDOM } = jsdom;
 
-  const virtualConsole = new jsdom.VirtualConsole();
-  virtualConsole.sendTo(console);
+//   const virtualConsole = new jsdom.VirtualConsole();
+//   virtualConsole.sendTo(console);
 
   beforeEach(() => {
     dom = new JSDOM(
