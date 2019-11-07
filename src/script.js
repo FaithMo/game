@@ -38,7 +38,7 @@ cardsMatching = () => {
     secondCard.removeEventListener("click", turnOver);
   } else {
     tilesLocked = true; //do not allow to flip other tiles
-  
+
     setTimeout(() => {
       //not a match...flip back to original.
       firstCard.classList.remove("flip");
