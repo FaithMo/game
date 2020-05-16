@@ -10,7 +10,6 @@ body {
 }
 
 .board {
-  margin: 0 auto;
   padding: -20px; /* may remove */
   width: 525px;
   height: 440px;
@@ -62,4 +61,8 @@ img {
   display: inline;
   cursor: pointer;
   border: 2px solid lightgrey;
+}
+
+.sec {
+  margin-top: 20px; 
 }
